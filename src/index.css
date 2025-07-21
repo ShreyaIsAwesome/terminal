@@ -1,0 +1,22 @@
+.inconsolata {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    font-family: 'inconsolata', monospace;
+    color: white;
+}
+
+.header{
+    display: flex;
+}
+
+.init-p{
+    line-height: 1.5;
+}

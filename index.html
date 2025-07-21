@@ -1,12 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me Terminal</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+  <title>About Me Terminal</title>
+</head>
+
+<body>
+  <div class="header">
+    <pre>
+                          _______
+                         | ___  o|
+                         |[_-_]_ |
+      ______________     |[_____]|
+     |.------------.|    |[_____]|
+     ||            ||    |[====o]|
+     ||            ||    |[_.--_]|
+     ||            ||    |[_____]|
+     ||            ||    |      :|
+     ||____________||    |      :|
+ .==.|""  ......    |.==.|      :|
+ |::| '-.________.-' |::||      :|
+ |''|  (__________)-.|''||______:|
+ `""`_.............._\""`______
+    /:::::::::::'':::\`;'-.-.  `\
+   /::=========.:.-::"\ \ \--\   \
+   \`""""""""""""""""`/  \ \__)   \
+    `""""""""""""""""`    '========'
+    </pre>
+    <pre class="init-p">
+      [ OK ] Starting Mac OS...
+      [ OK ] Loading system modules...
+      [ OK ] Initializing terminal...
+      [ OK ] Setting up environment variables...
+      [ OK ] Configuring network settings...
+      [ OK ] Mounting file systems...
+      [ OK ] Checking system integrity...
+      [ OK ] Starting background services...
+      [ OK ] Initializing Mac OS...
+      [ OK ] Loading user profile: shreya_nambiar
+      [ OK ] Connecting to mainframe...
+      [INFO] System time: <span id="time"></span>
+      [INFO] Terminal session started
+      [INFO] Type `help` to begin
+    </pre>
+  </div>
+  <div id="terminal"></div>
+  <script type="module" src="../src/index.jsx"></script>
+
+  <!--For Dynamically Setting Time !!-->
+  <script>
+        function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      });
+      document.getElementById('time').textContent = timeString;
+      };
+
+      updateTime();
+
+      setInterval(updateTime, 1000);
+
+      document.querySelector('.init-p').textContent = `[INFO] System time: ${timeString}`;
+  </script>
+
+</body>
+
 </html>
