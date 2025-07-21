@@ -1,4 +1,6 @@
 .terminal {
     margin: 10px;
+    padding-left: 10px;
     border: 1px solid #ccc;
+    font-size: 15px;
 }

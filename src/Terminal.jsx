@@ -1,9 +1,9 @@
-import './Terminal.css'
+import '../Terminal.css'
 
 function Terminal() {
   return (
     <div className='terminal'>
-      <p>Heloooo</p>
+      <p>[filler]</p>
     </div>
   )
 }
