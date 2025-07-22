@@ -35,28 +35,28 @@
     `""""""""""""""""`    '========'
     </pre>
     <pre class="init-p">
-      [ OK ] Starting Mac OS...
-      [ OK ] Loading system modules...
-      [ OK ] Initializing terminal...
-      [ OK ] Setting up environment variables...
-      [ OK ] Configuring network settings...
-      [ OK ] Mounting file systems...
-      [ OK ] Checking system integrity...
-      [ OK ] Starting background services...
-      [ OK ] Initializing Mac OS...
-      [ OK ] Loading user profile: shreya_nambiar
-      [ OK ] Connecting to mainframe...
-      [INFO] System time: <span id="time"></span>
-      [INFO] Terminal session started
-      [INFO] Type `help` to begin
+      <span class="term-line">[ OK ] Starting Mac OS...</span>
+      <span class="term-line">[ OK ] Loading system modules...</span>
+      <span class="term-line">[ OK ] Initializing terminal...</span>
+      <span class="term-line">[ OK ] Setting up environment variables...</span>
+      <span class="term-line">[ OK ] Configuring network settings...</span>
+      <span class="term-line">[ OK ] Mounting file systems...</span>
+      <span class="term-line">[ OK ] Checking system integrity...</span>
+      <span class="term-line">[ OK ] Starting background services...</span>
+      <span class="term-line">[ OK ] Initializing Mac OS...</span>
+      <span class="term-line">[ OK ] Loading user profile: shreya</span>
+      <span class="term-line">[ OK ] Connecting to mainframe...</span>
+      <span class="term-line">[INFO] System time: <span id="time"></span></span>
+      <span class="term-line">[INFO] Terminal session started</span>
+      <span class="term-line">INFO] Type `help` to begin</span>
     </pre>
   </div>
   <div id="terminal"></div>
-  <script type="module" src="../src/index.jsx"></script>
+  <script type="module" src="./src/index.jsx"></script>
 
-  <!--For Dynamically Setting Time !!-->
   <script>
-        function updateTime() {
+    // For Dynamically Setting Time !!
+    function updateTime() {
       const now = new Date();
       const timeString = now.toLocaleTimeString('en-US', {
         hour: '2-digit',
@@ -64,10 +64,18 @@
         second: '2-digit',
         hour12: false
       });
-      document.getElementById('time').textContent = timeString;
-      };
+    document.getElementById('time').textContent = timeString;
+    };
 
-      updateTime();
+    updateTime();
+
+    // For the animation of the terminal lines
+    const lines = document.querySelectorAll('.init-p .term-line');
+    lines.forEach((line, i) => {
+      setTimeout(() => {
+        line.classList.add('visible');
+      }, i * 850);
+    });
   </script>
 
 </body>

@@ -3,4 +3,16 @@
     padding-left: 10px;
     border: 1px solid #ccc;
     font-size: 15px;
+    display: flex;
+}
+
+.user-input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: 'Inconsolata', monospace;
+    font-size: 15px;
+    width: 75%;
+    margin-left: 10px;
 }
