@@ -1,6 +1,6 @@
 # Terminal About Me!
 
-This is a simple Flask + React program just to practice with them both again (also deploying which was definately my biggest struggle with this). I also learned lots about the Linux terminal and simple commands (i only included a few though).
+This is a simple React program just to practice with it again (also deploying which was definately my biggest struggle with this). I also learned lots about the Linux terminal and simple commands (i only included a few though).
 
 ## Note
 
